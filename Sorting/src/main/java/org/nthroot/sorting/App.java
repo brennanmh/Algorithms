@@ -35,14 +35,15 @@ public class App {
     }
     */
 
-        if (MergeSort.isSorted(inputData)) {
+        if (QuickSort.isSorted(inputData)) {
             System.out.println("Array is sorted");
         } else {
             System.out.println("Array is not sorted");
         }
 
         //int[] outputData = MergeSort.sort(inputData);
-        Comparable[] outputData = MergeSort.sort(inputData);
+        //Comparable[] outputData = MergeSort.sort(inputData);
+        QuickSort.sort(inputData);
 
     /*
     for (int i = 0 ; i < outputData.length ; i++) {
@@ -50,7 +51,7 @@ public class App {
     }
     */
 
-        if (MergeSort.isSorted(outputData)) {
+        if (QuickSort.isSorted(inputData)) {
             System.out.println("Array is sorted");
         } else {
             System.out.println("Array is not sorted");

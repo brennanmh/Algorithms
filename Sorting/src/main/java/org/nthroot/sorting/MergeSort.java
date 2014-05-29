@@ -2,7 +2,7 @@
 package org.nthroot.sorting;
 
 
-public class MergeSort {
+public class MergeSort extends SortBase {
 
 
     /////////////////////////////////////////
@@ -190,28 +190,13 @@ public class MergeSort {
 
     }
 
-
-    public static boolean isSorted(Comparable[] arr) {
-
-        boolean isSorted = true;
-        for (int i = 0 ; i < arr.length - 1 ; i++) {
-            if (arr[i].compareTo(arr[i+1]) > 0) {
-                isSorted = false;
-                break;
-            }
-        }
-
-        return isSorted;
+    /////////////////////////////////////////////////
+    // in-place merge sort
+    /////////////////////////////////////////////////
+    public static void sort(Comparable arr[]) {
+        ;
     }
 
-
-    public static void printArr(Comparable[] arr) {
-        System.out.print("|");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(String.format("%s|", arr[i].toString()));
-        }
-        System.out.println();
-    }
 
 }
 
