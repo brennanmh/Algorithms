@@ -128,6 +128,7 @@ public class MergeSort extends SortBase {
     // Comparable array sort
     //
     ///////////////////////////////////////////////
+    /*
     public static Comparable[] sort(Comparable[] arr) {
 
         // exit condition
@@ -189,14 +190,7 @@ public class MergeSort extends SortBase {
         return result;
 
     }
-
-    /////////////////////////////////////////////////
-    // in-place merge sort
-    /////////////////////////////////////////////////
-    public static void sort(Comparable arr[]) {
-        ;
-    }
-
+    */
 
 }
 
