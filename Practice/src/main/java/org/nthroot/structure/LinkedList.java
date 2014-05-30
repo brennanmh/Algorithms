@@ -20,24 +20,14 @@ public class LinkedList<T> {
 
 
     public void addFirst(T element) {
-
-        // check we've got head room
-        if (last > (.75 * size)) {
-            growList();
-        }
-
-        // adjust everything right
-        for (int i = last ; i >= 0 ; i--) {
-            list[i+i] = list[i];
-        }
-        list[0] = element;
+        addAt(element, 0);
     }
 
 
     public void addLast(T element) {
 
         // check we've got head room
-        if (last > (.75 * size)) {
+        if (last > (.75 * size) || (last >= (size - 1))) {
             growList();
         }
 
@@ -56,11 +46,35 @@ public class LinkedList<T> {
         }
 
         // check we've got head room
-        if (last > (.75 * size)) {
+        if (last > (.75 * size) || (last >= (size - 1))) {
             growList();
         }
 
+        for (int i = last ; i >= n ; i--) {
+            list[i+1] = list[i];
+        }
+        list[n] = element;
+        last++;
 
+    }
+
+
+    public T getLast() throws  ArrayIndexOutOfBoundsException {
+        if (last == -1 ) throw new ArrayIndexOutOfBoundsException("List Empty");
+
+        return list[last];
+    }
+
+    public T getFirst() throws  ArrayIndexOutOfBoundsException {
+        if (last == -1) throw new ArrayIndexOutOfBoundsException("List Empty");
+
+        return list[0];
+    }
+
+    public T getAt(int n) {
+        if (n > last) throw new ArrayIndexOutOfBoundsException(n);
+
+        return list[n];
     }
 
 
